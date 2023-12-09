@@ -1,0 +1,178 @@
+/* notes app */
+.Notes {
+  height: 100vh;
+  overflow-y: scroll;
+}
+.Notes::-webkit-scrollbar {
+  width: 4px;
+}
+.Notes::-webkit-scrollbar-track {
+  background: rgb(201, 199, 199);
+}
+.Notes::-webkit-scrollbar-thumb {
+  background: rgb(108, 117, 125);
+  border-radius: 20px;
+  margin: 0 2px;
+}
+/* icons*/
+.NotesIcon {
+  width: 20px;
+  height: 20px;
+}
+.searchIcon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+.SearchCloseIcon {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+.finishIcon,
+.deleteIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  outline: none;
+  border: none;
+  background: transparent;
+}
+.addIcon {
+  position: fixed;
+  right: 2%;
+  bottom: 2%;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+/* err info style */
+.errMsg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+/* header bar */
+header {
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+/* search list */
+.searchListCon {
+  min-height: fit-content;
+  max-height: 40vh;
+  overflow-y: scroll;
+}
+.searchListCon::-webkit-scrollbar {
+  width: 4px;
+}
+.searchListCon::-webkit-scrollbar-track {
+  background: rgb(201, 199, 199);
+  border-radius: 20px;
+}
+.searchListCon::-webkit-scrollbar-thumb {
+  background: rgb(108, 117, 125);
+  border-radius: 20px;
+  margin: 0 2px;
+}
+.listItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  background: transparent;
+  transition: 0.3 ease;
+}
+.listItem:hover {
+  background-color: rgb(108, 117, 125);
+  color: white;
+}
+.listItem span {
+  text-wrap: nowrap;
+  overflow: hidden;
+}
+/* below headers */
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+.item {
+  height: 140px;
+  border: 1px solid rgb(167, 162, 162);
+  border-radius: 7px;
+  overflow: hidden;
+  padding: 0.3em;
+  background-color: rgb(247, 242, 242);
+  transition: 0.3s ease;
+}
+.item:hover {
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+/* form style */
+.NewInputForm {
+  position: fixed;
+  top: 0%;
+  left: 50%;
+  z-index: 2;
+  transform: translate(-50%, -0%);
+  /* border: 1px solid rgb(167, 162, 162); */
+  height: 100vh;
+  background-color: rgb(247, 242, 242);
+  overflow: hidden;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.date {
+  font-size: 14px;
+  font-family: "Kumbh Sans", sans-serif;
+  font-weight: 400;
+}
+.textCon {
+  height: 85%;
+}
+textarea::-webkit-scrollbar {
+  width: 4px;
+}
+textarea::-webkit-scrollbar-track {
+  background: rgb(201, 199, 199);
+  border-radius: 20px;
+}
+textarea::-webkit-scrollbar-thumb {
+  background: rgb(108, 117, 125);
+  border-radius: 20px;
+  margin: 0 2px;
+}
+/* responsive screen*/
+@media (max-width: 576px) {
+  .item {
+    height: 85px;
+  }
+  .Notes::-webkit-scrollbar {
+    display: none;
+  }
+  .searchListCon::-webkit-scrollbar {
+    display: none;
+  }
+  .listItem:active {
+    background-color: rgb(108, 117, 125);
+    color: white;
+  }
+}
